@@ -1,0 +1,4 @@
+scikit-learn>=1.4
+numpy>=1.26
+pytest
+anthropic>=0.40   # optional: second-opinion classifier and tone polish

@@ -1,0 +1,101 @@
+{
+  "split": "test tickets use sentence templates never seen in training",
+  "n_train": 840,
+  "n_test": 280,
+  "classification": {
+    "accuracy_all": 0.771,
+    "macro_f1_all": 0.749,
+    "auto_share": 0.464,
+    "accuracy_on_auto": 0.931,
+    "min_confidence": 0.35
+  },
+  "per_class": {
+    "account_access": {
+      "precision": 0.737,
+      "recall": 0.7,
+      "f1-score": 0.718
+    },
+    "cheating_report": {
+      "precision": 0.714,
+      "recall": 1.0,
+      "f1-score": 0.833
+    },
+    "disconnect_bug": {
+      "precision": 0.974,
+      "recall": 0.925,
+      "f1-score": 0.949
+    },
+    "event_reward": {
+      "precision": 0.725,
+      "recall": 0.725,
+      "f1-score": 0.725
+    },
+    "other": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1-score": 0.4
+    },
+    "refund_request": {
+      "precision": 0.688,
+      "recall": 0.825,
+      "f1-score": 0.75
+    },
+    "topup_missing": {
+      "precision": 0.78,
+      "recall": 0.975,
+      "f1-score": 0.867
+    }
+  },
+  "coverage_curve": [
+    {
+      "min_confidence": 0.25,
+      "auto_share": 0.786,
+      "accuracy_on_auto": 0.823
+    },
+    {
+      "min_confidence": 0.3,
+      "auto_share": 0.596,
+      "accuracy_on_auto": 0.85
+    },
+    {
+      "min_confidence": 0.35,
+      "auto_share": 0.464,
+      "accuracy_on_auto": 0.931
+    },
+    {
+      "min_confidence": 0.4,
+      "auto_share": 0.411,
+      "accuracy_on_auto": 0.93
+    },
+    {
+      "min_confidence": 0.45,
+      "auto_share": 0.346,
+      "accuracy_on_auto": 0.969
+    },
+    {
+      "min_confidence": 0.5,
+      "auto_share": 0.268,
+      "accuracy_on_auto": 0.96
+    },
+    {
+      "min_confidence": 0.55,
+      "auto_share": 0.186,
+      "accuracy_on_auto": 0.962
+    }
+  ],
+  "order_id_extraction_recall": 1.0,
+  "pipeline_status": {
+    "AWAITING_APPROVAL": 130,
+    "NEEDS_TRIAGE": 150
+  },
+  "confusions": {
+    "other -> refund_request": 14,
+    "other -> event_reward": 11,
+    "event_reward -> account_access": 10,
+    "account_access -> cheating_report": 9,
+    "refund_request -> topup_missing": 5,
+    "other -> cheating_report": 5,
+    "disconnect_bug -> topup_missing": 3,
+    "refund_request -> cheating_report": 2
+  }
+}
